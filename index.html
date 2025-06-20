@@ -5,9 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Feba Francis</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 600px; margin: 2em auto; padding: 1em; }
-    h1 { color: #2c3e50; }
-    p { font-size: 1.1em; line-height: 1.5; }
+    body {
+      position: relative;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1d3557;
+      max-width: 700px;
+      margin: 3em auto;
+      padding: 2em;
+      background: none;
+      z-index: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg') no-repeat center center;
+      background-size: cover;
+      opacity: 0.1;
+      filter: blur(8px);
+      z-index: -1;
+    }
   </style>
 </head>
 <body>
