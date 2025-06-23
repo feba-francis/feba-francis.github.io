@@ -162,3 +162,40 @@
   </section>
 </body>
 </html>
+<script>
+  const header = document.querySelector('header');
+  let lastScrollY = window.scrollY;
+
+  function showHeader() {
+    header.style.display = 'block';
+    header.style.opacity = '1';
+  }
+
+  function hideHeader() {
+    header.style.opacity = '0';
+    setTimeout(() => header.style.display = 'none', 500);
+  }
+
+  // Hide header after 3 seconds on load
+  window.onload = () => {
+    setTimeout(hideHeader, 3000);
+  };
+
+  // Show header if scrolling up
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < lastScrollY) {
+      showHeader();
+    } else {
+      hideHeader();
+    }
+    lastScrollY = window.scrollY;
+  });
+
+  // Show header on mouse near top (within 50px)
+  window.addEventListener('mousemove', e => {
+    if (e.clientY < 50) {
+      showHeader();
+    }
+  });
+</script>
+
