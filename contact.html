@@ -2,10 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact</title>
+  <title>Contact Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 3em auto;
+      padding: 2em;
+      color: #1d3557;
+    }
+
+    h2 {
+      text-align: center;
+      color: #4169E1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4169E1;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+  </style>
 </head>
 <body>
-  <h1>This is the contact page.</h1>
-  <p>If you see this, the contact.html is working.</p>
+
+  <h2>Contact Me</h2>
+
+  <form action="https://formspree.io/f/meokdeeo" method="POST">
+    <label>
+      Your email:
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+      Subject:
+      <input type="text" name="subject" required>
+    </label>
+
+    <label>
+      Your message:
+      <textarea name="message" rows="6" required></textarea>
+    </label>
+
+    <button type="submit">Send</button>
+  </form>
+
 </body>
 </html>
